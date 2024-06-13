@@ -1,0 +1,19 @@
+<%- include('partials/header.ejs') %>
+
+  <%- include('partials/navbar.ejs') %>
+    <h2> Angka Random : <%= random %>
+    </h2>
+
+    <!-- jika angka nya genap -->
+    <% if (random % 2===0) { %>
+      <h3>Angka Genap</h3>
+      <% } else { %>
+        <!-- jika angka nya ganjil -->
+        <h3>angka Ganjil</h3>
+        <% } %>
+
+          <!-- menggunakan ternarry -->
+          <!-- jika angka randomnya dibagi 2 lalu 0 true makaa genap jika 1 false  ganjil -->
+          <h2>Angkanya : <%= random%2===0 ? 'Genap' : 'Ganjil' %>
+          </h2>
+          <%- include('partials/footer.ejs') %>
